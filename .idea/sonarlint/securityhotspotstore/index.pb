@@ -25,3 +25,7 @@ N
 src/functions/users/handler.ts,c\e\ce6569843049df497c91957e1b564427579eba91
 L
 src/functions/users/index.ts,2\5\25d1dd96856cfdb8014aa4b965c2d003ae92becb
+W
+'src/functions/users/findById/handler.ts,e\7\e76954131b3563f095e92eda94988cc1f6813735
+U
+%src/functions/users/findById/index.ts,1\4\1499ea9cb8ace67e2ff6f632bd1d0b3f8346c81b
