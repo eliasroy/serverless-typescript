@@ -35,3 +35,5 @@ S
 #src/users/entity/user.repository.ts,0\1\01eeb60e0c1b0e9a52407936ff007811f96d7605
 Q
 !src/users/services/UserService.ts,1\a\1a4f5b2c21f51d90f13935fddd3fe5817fd0c9b7
+N
+src/config/inversify.config.ts,9\b\9b96872a0ef5d4ec7a7973bb91a959970f79eed5

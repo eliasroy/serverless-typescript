@@ -1,5 +1,7 @@
 import{findAllMock} from "../mock/find.all.mock"
+import {injectable} from "inversify";
 
+@injectable()
 export class UserRepository{
     public findAllMock():typeof findAllMock{
         return findAllMock

@@ -1,13 +1,12 @@
 import { formatJSONResponse } from '@libs/api-gateway';
 import {APIGatewayProxyEvent, Context} from "aws-lambda";
 import {UserService} from "../../../users/services/UserService";
-import {UserRepository} from "../../../users/entity/user.repository";
+import {containeer} from "../../../config/inversify.config";
 
 export const main = async (event:APIGatewayProxyEvent,_context:Context) => {
 try{
-    //const {name} = JSON.parse(event.body) as {name:string};
     const{id}=event.pathParameters;
-    const userService= new UserService(new UserRepository());
+    const userService= containeer.get(UserService);
     return formatJSONResponse({
         result: userService.findById(id),
     });

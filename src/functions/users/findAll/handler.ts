@@ -1,11 +1,10 @@
 import { formatJSONResponse } from '@libs/api-gateway';
 import {UserService} from "../../../users/services/UserService";
-import {UserRepository} from "../../../users/entity/user.repository";
+import {containeer} from "../../../config/inversify.config";
 
 export const main = async ()=>{
     try{
-        const userService= new UserService(new UserRepository());
-
+        const userService= containeer.get(UserService);
         return formatJSONResponse({
             result: userService.findAll(),
         });
