@@ -6,7 +6,7 @@ export const findAll= {
   events: [
     {
       http: {
-        method: 'post',
+        method: 'get',
         path: 'users/findAll',
       },
     },

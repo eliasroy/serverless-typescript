@@ -29,3 +29,9 @@ T
 $src/functions/users/findAll/index.ts,d\b\db8ebb1137c31da9265964955bb100dd85ea5d04
 V
 &src/functions/users/findAll/handler.ts,6\9\696602a62c7010f6ea97d7439f8048eeb7368a24
+O
+src/users/mock/find.all.mock.ts,c\3\c31e40b85e1627c5ff7d6628d1e4cfda404cb40c
+S
+#src/users/entity/user.repository.ts,0\1\01eeb60e0c1b0e9a52407936ff007811f96d7605
+Q
+!src/users/services/UserService.ts,1\a\1a4f5b2c21f51d90f13935fddd3fe5817fd0c9b7

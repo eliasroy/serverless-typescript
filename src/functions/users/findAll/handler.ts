@@ -1,20 +1,17 @@
 import { formatJSONResponse } from '@libs/api-gateway';
-import {APIGatewayProxyEvent, Context} from "aws-lambda";
+import {UserService} from "../../../users/services/UserService";
+import {UserRepository} from "../../../users/entity/user.repository";
 
-const main = async (event:APIGatewayProxyEvent,context:Context) => {
+export const main = async ()=>{
     try{
-        const {name} = JSON.parse(event.body) as {name:string};
-        const {awsRequestId} = context;
+        const userService= new UserService(new UserRepository());
+
         return formatJSONResponse({
-            message: `Hello ${name}, welcome to the exciting Serverless world!`,
-            awsRequestId,
+            result: userService.findAll(),
         });
     }catch(error){
         return formatJSONResponse({
             error:error.message,
         });
-
     }
 };
-
-export default main;

@@ -1,15 +1,15 @@
 import { formatJSONResponse } from '@libs/api-gateway';
 import {APIGatewayProxyEvent, Context} from "aws-lambda";
+import {UserService} from "../../../users/services/UserService";
+import {UserRepository} from "../../../users/entity/user.repository";
 
-const main = async (event:APIGatewayProxyEvent,context:Context) => {
+export const main = async (event:APIGatewayProxyEvent,_context:Context) => {
 try{
     //const {name} = JSON.parse(event.body) as {name:string};
     const{id}=event.pathParameters;
-    const{age}=event.queryStringParameters;
-    const {awsRequestId} = context;
+    const userService= new UserService(new UserRepository());
     return formatJSONResponse({
-        message: `Hello ${id}, welcome to the exciting Serverless world!${age}`,
-        awsRequestId,
+        result: userService.findById(id),
     });
 }catch(error){
     return formatJSONResponse({
@@ -18,5 +18,3 @@ try{
 
 }
 };
-
-export default main ;
