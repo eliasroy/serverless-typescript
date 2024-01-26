@@ -37,3 +37,5 @@ Q
 !src/users/services/UserService.ts,1\a\1a4f5b2c21f51d90f13935fddd3fe5817fd0c9b7
 N
 src/config/inversify.config.ts,9\b\9b96872a0ef5d4ec7a7973bb91a959970f79eed5
+B
+docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
